@@ -1,0 +1,25 @@
+#!/bin/bash
+CMD=$1
+case $CMD in
+  "init")
+    alembic init -t async alembic
+    ;;
+  "add")
+    if [ -z "$2" ]; then
+      echo "Commands: init run add"
+    else
+      alembic revision --autogenerate -m "$2"
+    fi
+    ;;
+  "migrate")
+      alembic upgrade head
+    ;;
+  "revert")
+      alembic downgrade -1
+    ;;
+  *)
+    echo "$1 is not a command."
+    echo "init add migrate revert"
+    ;;
+esac
+

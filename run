@@ -1,0 +1,3 @@
+#!/bin/bash
+## Local run
+uvicorn financial.main:app --reload
