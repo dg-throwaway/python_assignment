@@ -2,23 +2,25 @@
 Get stock data with a script and host an API service that can retrieve sets of data to your specifications.
 
 ## Developed On
-    - OS: Arch Linux
-    - **Python Version**: 3.11.2
+  - OS: Arch Linux
+  - **Python Version**: 3.11.2
 
 ## Tech Stack
-    - FastAPI for framework
-    - Async SQLAlchemy for ORM
-    - SQLite for database
-    - Alembic for migrations
-    - Docker Compose for containerization
+  - FastAPI for framework
+  - Async SQLAlchemy for ORM
+  - SQLite for database
+  - Alembic for migrations
+  - Docker Compose for containerization
 
 ## Setup
 0. Add to `.env` in project root:
+
 ```
 VANTAGE_API_KEY=YOUR_API_KEY
 DATABASE_CONNECTIONSTRING="sqlite+aiosqlite:///database.db"
 ```
-    - Replace YOUR_API_KEY with your own vantage api key
+
+  - Replace YOUR_API_KEY with your own vantage api key
 1. Activate venv: `python -m venv venv`
 2. `source venv/bin/activate`
     - Mac: probably the same as linux
